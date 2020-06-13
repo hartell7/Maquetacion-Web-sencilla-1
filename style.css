@@ -1,0 +1,113 @@
+body {
+    background: #e9e9e9e9;
+    font-family: sans-serif;
+    font-size: 100%;
+    
+}
+.contenedor {
+    width: 100%;
+    max-width: 1000px;
+    padding: 5px;
+    margin: auto;
+
+    display: grid;
+    grid-gap: 15px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas:    "header1     header1    header1"
+                            "sidebar1    content1   content2"
+                            "sidebar1    content3   content4"
+                            "footer1     footer1    footer1";
+}
+
+.contenedor > div, 
+.contenedor .header1,
+.contenedor .sidebar1
+.contenedor .content1,
+.contenedor .content2,
+.contenedor .content3,
+.contenedor .content4 {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 10px;
+
+    
+
+}
+.contenedor .header1 {
+    background: linear-gradient(to right, teal, greenyellow);
+    grid-area: header1;
+    text-align: center;
+}
+.contenedor .content1,
+.contenedor .content2,
+.contenedor .content3,
+.contenedor .content4 {
+    text-align: justify;
+}
+
+
+.content1 {
+    background: linear-gradient(to bottom left, yellow, greenyellow);
+    color: #000;
+    padding: 10px;
+    grid-area: content1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    width: 375px;
+}
+.contenedor .content2 {
+    background: linear-gradient(to right, rgb(148, 16, 148), rgb(41, 206, 235));
+    color: ;
+    grid-area: content2;
+
+    width: 400px;
+}
+.contenedor .content3 {
+    background: linear-gradient(to left, greenyellow, teal);
+    color: #000;
+    grid-area: content3;
+}
+.contenedor .content4 {
+    background: linear-gradient(to left, teal, purple);
+    color: #fff;
+    grid-area: content4;
+}
+.contenedor .sidebar1 {
+    background: linear-gradient(blue, yellow);
+    color: #fff;
+    grid-template-areas: sidebar1;
+    grid-row: span 2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-align: center;
+    width: 160px;
+    max-width: 160px;
+
+
+}
+.contenedor .footer1 {
+    background: rgb(139, 129, 129);
+    color: #000;
+    grid-area: footer1;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    text-align: center;
+}
